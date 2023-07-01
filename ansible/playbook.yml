@@ -1,0 +1,7 @@
+---
+- name: Implantar aplicação web no servidor nginx
+  hosts: default
+  become: true
+  roles:
+    - nginx
+...

@@ -1,0 +1,15 @@
+---
+- name: Atualizar o cache do apt
+  apt:
+    update_cache: true
+
+- name: Instalar o nginx
+  apt:
+    name: "nginx"
+    state: "present"
+
+- name: Copiar o arquivo html para o diretório /var/www/html
+  copy:
+    src: .
+    dest: /var/www/html
+...
